@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Recherche Fiche</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <p>This is the resultat recherche fiche</p>
+    <label>Departement: </label>
+    <select name="department" id="department">
+        <option value="92">92</option>
+        <option value="91">91</option>
+        <option value="44">44</option>
+        <option value="33">33</option>
+    </select>
+
+    <label>Commune</label>
+    <select name="commune" id="commune">
+        <option value="002">Antony</option>
+        <option value="035">Bagneux</option>
+        <option value="023">L'hay-le-rose</option>
+        <option value="034">Villejuif</option>
+    </select>
+
+    <button onclick="window.location.href='/consultation'">Rechercher</button>
+
+    <script>
+        function rechercherFiche(){
+            console.log('clicked on rechercher fiche');
+        }
+    </script>
+</body>
+</html>

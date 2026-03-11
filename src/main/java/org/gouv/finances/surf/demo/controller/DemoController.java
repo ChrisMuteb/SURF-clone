@@ -1,5 +1,6 @@
 package org.gouv.finances.surf.demo.controller;
 
+import org.gouv.finances.surf.demo.entite.Commune;
 import org.gouv.finances.surf.demo.entite.Departement;
 import org.gouv.finances.surf.demo.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,9 @@ public class DemoController {
     @GetMapping("/greetings")
     public String greetings(Model model){
         List<Departement> departements = demoService.getDepartements();
-        model.addAttribute(departements);
+        List<Commune> communes = demoService.getCommunes();
+        model.addAttribute("allDepts", departements);
+        model.addAttribute("allComs", communes);
         return "rechercheFiche";
     }
 
